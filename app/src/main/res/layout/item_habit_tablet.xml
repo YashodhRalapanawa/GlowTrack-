@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/card_background"
+    app:strokeColor="@color/divider_color"
+    app:strokeWidth="0dp"
+    android:stateListAnimator="@animator/card_press_animator">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Added icon container for habit with gradient background -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/primary_light">
+
+                <ImageView
+                    android:id="@+id/iv_habit_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_habits"
+                    app:tint="@color/primary" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Habit Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_habit_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    tools:text="Exercise" />
+
+                <TextView
+                    android:id="@+id/tv_habit_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    android:lineSpacingExtra="2dp"
+                    tools:text="Daily physical activity"
+                    tools:visibility="visible" />
+
+                <!-- Added category chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_habit_category"
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Health"
+                    android:textSize="12sp"
+                    app:chipBackgroundColor="@color/surface_variant"
+                    app:chipStrokeWidth="0dp"
+                    app:chipMinHeight="28dp"
+                    tools:text="Health" />
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_share"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Share habit"
+                    app:icon="@drawable/ic_share"
+                    app:iconTint="@color/text_secondary"
+                    app:iconSize="20dp"
+                    android:stateListAnimator="@animator/button_press_animator" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_delete"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="Delete habit"
+                    app:icon="@drawable/ic_delete"
+                    app:iconTint="@color/error_red"
+                    app:iconSize="20dp"
+                    android:stateListAnimator="@animator/button_press_animator" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Added divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="20dp"
+            android:background="@color/divider_color" />
+
+        <!-- Target Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_target"
+                app:tint="@color/secondary" />
+
+            <TextView
+                android:id="@+id/tv_habit_target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Target: 30 minutes" />
+
+        </LinearLayout>
+
+        <!-- Progress Section with Enhanced Visualization -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Progress Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_progress_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15sp"
+                    tools:text="Progress: 20/30 minutes" />
+
+                <TextView
+                    android:id="@+id/tv_progress_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="67%" />
+
+            </LinearLayout>
+
+            <!-- Enhanced progress bar with gradient and milestones -->
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_bar_habit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="67"
+                app:trackCornerRadius="12dp"
+                app:trackThickness="16dp"
+                app:indicatorColor="@color/primary"
+                app:trackColor="@color/progress_incomplete" />
+
+            <!-- Milestone Indicators -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_milestone_indicator"
+                    android:backgroundTint="@color/primary" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/progress_incomplete" />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_milestone_indicator"
+                    android:backgroundTint="@color/text_hint" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/progress_incomplete" />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_milestone_indicator"
+                    android:backgroundTint="@color/text_hint" />
+
+            </LinearLayout>
+
+            <!-- Streak Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/accent_light">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_fire"
+                        app:tint="@color/accent" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tv_streak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    tools:text="Streak: 5 days 🔥" />
+
+                <!-- Added completion button with better styling -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_toggle_completion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Mark Complete"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:paddingHorizontal="20dp"
+                    app:backgroundTint="@color/primary"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_check"
+                    app:iconGravity="textStart"
+                    app:iconSize="18dp"
+                    tools:text="Complete"
+                    android:stateListAnimator="@animator/button_press_animator" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Completion Animation Overlay -->
+        <View
+            android:id="@+id/completion_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_completion_overlay"
+            android:alpha="0"
+            android:layout_marginTop="-24dp"
+            android:layout_marginStart="-24dp"
+            android:layout_marginEnd="-24dp"
+            android:layout_marginBottom="-24dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

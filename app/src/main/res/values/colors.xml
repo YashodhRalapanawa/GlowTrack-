@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modern color scheme with F4F6FF, F3C623, EB8317, 10375C -->
+
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Brand Colors (Deep Blue) -->
+    <color name="primary">#FF10375C</color>
+    <color name="primary_variant">#FF0D2A45</color>
+    <color name="primary_light">#FF1A4A75</color>
+    <color name="on_primary">#FFFFFFFF</color>
+
+    <!-- Secondary Colors (Bright Orange) -->
+    <color name="secondary">#FFEB8317</color>
+    <color name="secondary_variant">#FFD67614</color>
+    <color name="secondary_light">#FFEF9A3F</color>
+    <color name="on_secondary">#FFFFFFFF</color>
+
+    <!-- Accent Colors (Golden Yellow) -->
+    <color name="accent">#FFF3C623</color>
+    <color name="accent_variant">#FFE0B41F</color>
+    <color name="accent_light">#FFF5D04D</color>
+    <color name="on_accent">#FF10375C</color>
+
+    <!-- Background Colors (Light Blue) -->
+    <color name="background">#FFF4F6FF</color>
+    <color name="background_secondary">#FFFAFBFF</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="surface_variant">#FFF8F9FF</color>
+
+    <!-- Error Color -->
+    <color name="error">#FFDC3545</color>
+    <color name="error_light">#FFFCE8E8</color>
+    <color name="on_error">#FFFFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FF10375C</color>
+    <color name="text_secondary">#FF5A7A95</color>
+    <color name="text_tertiary">#FF8FA5B8</color>
+    <color name="text_disabled">#FFC4D1DD</color>
+    <color name="text_hint">#FFD4DFE8</color>
+
+    <!-- Status Colors -->
+    <color name="success">#FF28A745</color>
+    <color name="success_green">#FF28A745</color>
+    <color name="warning">#FFF3C623</color>
+    <color name="info">#FF17A2B8</color>
+    <color name="error_red">#FFDC3545</color>
+
+    <!-- Card Colors with Modern Tints -->
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="card_habit">#FFFEF9F0</color>
+    <color name="card_mood">#FFFFF8E6</color>
+    <color name="card_hydration">#FFF0F4FA</color>
+    <color name="card_settings">#FFF8F9FF</color>
+
+    <!-- Mood Colors (Updated with new palette) -->
+    <color name="mood_very_happy">#FF28A745</color>
+    <color name="mood_happy">#FFF3C623</color>
+    <color name="mood_neutral">#FF8FA5B8</color>
+    <color name="mood_sad">#FF5A7A95</color>
+    <color name="mood_very_sad">#FF10375C</color>
+    <color name="mood_angry">#FFDC3545</color>
+    <color name="mood_excited">#FFEB8317</color>
+    <color name="mood_calm">#FF17A2B8</color>
+    <color name="mood_anxious">#FFF3C623</color>
+    <color name="mood_tired">#FF8FA5B8</color>
+
+    <!-- Progress Colors -->
+    <color name="progress_complete">#FFEB8317</color>
+    <color name="progress_incomplete">#FFE8ECFF</color>
+    <color name="divider_color">#FFE8ECFF</color>
+
+    <!-- Navigation -->
+    <color name="nav_selected">#FF10375C</color>
+    <color name="nav_unselected">#FF8FA5B8</color>
+
+    <!-- Additional Accent Colors -->
+    <color name="accent_blue">#FF10375C</color>
+    <color name="accent_green">#FF28A745</color>
+    <color name="accent_purple">#FF6C5CE7</color>
+    <color name="accent_orange">#FFEB8317</color>
+    <color name="primary_green">#FF28A745</color>
+    <color name="primary_green_light">#FF5FD47F</color>
+    <color name="accent_blue_light">#FF3A5F84</color>
+    <color name="warning_orange">#FFEB8317</color>
+    <color name="surface_color">#FFF8F9FF</color>
+    <color name="background_light">#FFF4F6FF</color>
+
+    <!-- Switch Colors -->
+    <color name="switch_thumb_checked">#FFEB8317</color>
+    <color name="switch_thumb_unchecked">#FFCCCCCC</color>
+    <color name="switch_track_checked">#FFFAD4B8</color>
+    <color name="switch_track_unchecked">#FFE8ECFF</color>
+
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#FF10375C</color>
+    <color name="gradient_mid">#FFEB8317</color>
+    <color name="gradient_end">#FFF3C623</color>
+</resources>
